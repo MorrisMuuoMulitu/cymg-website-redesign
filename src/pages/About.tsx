@@ -322,7 +322,7 @@ export default function About() {
         {/* ── Quick Links ──────────────────────────────────────── */}
         <section className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mb-28">
           <Link
-            to="/history-and-mandate"
+            to="/about/history-mandate"
             className="group inline-flex items-center gap-2 text-lg font-bold transition-colors"
             style={{ color: 'var(--ink)' }}
           >

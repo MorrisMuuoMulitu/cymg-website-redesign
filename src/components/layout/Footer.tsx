@@ -6,7 +6,7 @@ const footerColumns = [
     title: 'Organization',
     links: [
       { label: 'About CYMG', href: '/about' },
-      { label: 'History & Mandate', href: '/history-and-mandate' },
+      { label: 'History & Mandate', href: '/about/history-mandate' },
       { label: 'Governance', href: '/governance' },
       { label: 'Our Team', href: '/team' },
     ],
@@ -34,7 +34,7 @@ const footerColumns = [
       { label: 'Latest Stories', href: '/blog' },
       { label: 'Documents Hub', href: '/documents' },
       { label: 'Events Calendar', href: '/calendar' },
-      { label: 'Policies', href: '/policies-and-safeguarding' },
+      { label: 'Policies', href: '/about/policies-and-safeguarding' },
     ],
   },
 ];
@@ -105,7 +105,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Children and Youth Major Group. All rights reserved.
           </div>
           <div className="flex gap-8 text-xs text-slate-500 font-medium">
-            <Link to="/policies-and-safeguarding" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/about/policies-and-safeguarding" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link to="/contact" className="hover:text-white transition-colors">Contact Us</Link>
           </div>
         </div>

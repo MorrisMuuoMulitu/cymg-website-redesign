@@ -336,6 +336,50 @@ Additionally, as UNEP shifts toward implementation, given youth’s unique vulne
     readTime: 8,
     relatedSlugs: ['resolution-recap-youth-participation-education', 'unea-7-consultations'],
   },
+  {
+    id: '10',
+    title: 'Resolution Recap Series – Tackling antimicrobial resistance (AMR) from the environmental lens',
+    slug: 'resolution-recap-amr',
+    excerpt: 'At UNEA-7, Kenya proposed a landmark resolution addressing the environmental dimensions of antimicrobial resistance, now increasingly recognized as an environmental governance challenge under the One Health approach.',
+    content: `**Resolution Name:** Tackling antimicrobial resistance (AMR) from the environmental lens
+**Proposed by:** Kenya
+
+## What This Resolution Is About
+
+At its seventh session, the United Nations Environment Assembly (UNEA-7) adopted a landmark resolution addressing the environmental dimensions of antimicrobial resistance (AMR) proposed by the host country, Kenya. Traditionally framed as a health issue, AMR is now increasingly recognized as an environmental governance challenge under the One Health approach.
+
+Antimicrobial resistance occurs when bacteria, viruses, fungi, and parasites evolve to withstand the drugs designed to kill them. The environmental dimension of AMR is significant — pharmaceutical manufacturing waste, agricultural runoff, improper disposal of antibiotics, and wastewater treatment all contribute to the spread of resistant organisms in the environment.
+
+## Why This Matters
+
+The resolution recognizes that:
+- AMR is not just a human health issue but has critical environmental dimensions
+- UNEP has a unique role in addressing the environmental pathways of AMR
+- A One Health approach that integrates human, animal, and environmental health is essential
+- Better surveillance and monitoring of AMR in the environment is needed
+
+## CYMG's Role
+
+CYMG contributed to the negotiations by:
+- Advocating for youth inclusion in environmental AMR monitoring programs
+- Highlighting the role of young scientists in AMR research
+- Pushing for capacity building and education programs targeting young people
+- Supporting references to environmental education as a tool to combat AMR
+
+## What This Means for Youth
+
+The resolution opens new opportunities for youth engagement in environmental AMR governance:
+- Young scientists can participate in environmental surveillance programs
+- Youth-led organizations can contribute to AMR awareness campaigns
+- Education and capacity building programs will be developed
+- Cross-sectoral collaboration between health and environmental youth networks is encouraged`,
+    featuredImage: '/images/bento/chemicals-waste.jpg',
+    author: { name: 'CYMG Policy Team', bio: 'The CYMG Policy Coordination Group oversees policy engagement across all thematic working groups.' },
+    tags: ['Resolution Recap', 'UNEA-7', 'AMR', 'One Health'],
+    publishDate: '2025-03-04',
+    readTime: 4,
+    relatedSlugs: ['resolution-recap-wildfires', 'resolution-recap-youth-participation-education'],
+  },
 ];
 
 export const blogTagFilters = [

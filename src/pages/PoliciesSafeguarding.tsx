@@ -93,7 +93,7 @@ export default function PoliciesSafeguarding() {
                 ))}
               </ul>
               <div className="mt-8 pt-6 border-t border-line dark:border-white/5">
-                <a href="#" className="inline-flex items-center gap-2 font-bold text-[var(--assembly-blue)] hover:underline">
+                <a href="https://docs.google.com/document/d/1M2TTdt2fjrpDHrODxIsayWZ8bYGNuzFYdrh-2tq4Udg/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-bold text-[var(--assembly-blue)] hover:underline">
                   <FileText size={18} /> Read Full Code of Conduct <ExternalLink size={14} />
                 </a>
               </div>
