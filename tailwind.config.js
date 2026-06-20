@@ -5,12 +5,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ink: "#1e1e1e",
-        "cymg-green": "#1e4d32",
-        "cymg-green-deep": "#163b26",
-        "cymg-green-dark": "#122e1e",
-        "cymg-green-light": "#2d5a3d",
-        "cymg-green-bright": "#4a7c59",
+        ink: "var(--ink)",
+        paper: "var(--paper)",
+        surface: "var(--surface)",
+        line: "var(--line)",
+        "cymg-green": "var(--cymg-green)",
+        "cymg-green-deep": "var(--cymg-green-deep)",
+        "cymg-green-dark": "var(--cymg-green-dark)",
+        "cymg-green-light": "var(--cymg-green-light)",
+        "cymg-green-bright": "var(--cymg-green-bright)",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

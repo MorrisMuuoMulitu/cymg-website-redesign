@@ -67,12 +67,12 @@ export default function PoliciesSafeguarding() {
               <h2 className="text-2xl md:text-3xl font-semibold text-ink mb-5">
                 Upholding the highest standards of community conduct.
               </h2>
-              <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+              <p className="text-lg text-[var(--ink-60)] leading-relaxed">
                 All community members, volunteers, and accredited organizations are expected to uphold our Code of Conduct and Safeguarding Framework. This ensures that youth engagement remains a productive and safe environment for all.
               </p>
             </div>
 
-            <div className="bg-white dark:bg-slate-900 rounded-sm border border-line dark:border-white/5 p-8">
+            <div className="bg-paper dark:bg-paper rounded-sm border border-line dark:border-white/5 p-8">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-[var(--cymg-green)]/10 dark:bg-[var(--cymg-green)]/20 rounded-sm flex items-center justify-center text-[var(--cymg-green)]">
                   <Shield size={24} />
@@ -86,7 +86,7 @@ export default function PoliciesSafeguarding() {
                   'Maintain confidentiality in sensitive discussions',
                   'Zero tolerance for harassment or discrimination',
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm font-medium text-slate-600 dark:text-slate-400">
+                  <li key={item} className="flex items-start gap-3 text-sm font-medium text-[var(--ink-60)]">
                     <CheckCircle2 size={18} className="text-[var(--cymg-green)] shrink-0 mt-0.5" />
                     {item}
                   </li>
@@ -126,7 +126,7 @@ export default function PoliciesSafeguarding() {
           </div>
 
           {/* Reporting Form */}
-          <div id="report-form" className="bg-white dark:bg-slate-900 rounded-sm p-10 md:p-12 border border-line dark:border-white/5">
+          <div id="report-form" className="bg-paper dark:bg-paper rounded-sm p-10 md:p-12 border border-line dark:border-white/5">
             <div className="flex items-center gap-3 mb-8">
               <AlertTriangle className="text-[var(--cymg-green)]" />
               <h3 className="text-2xl font-semibold text-ink dark:text-paper ">Report a Concern</h3>
@@ -138,7 +138,7 @@ export default function PoliciesSafeguarding() {
                   <CheckCircle2 size={40} />
                 </div>
                 <h4 className="text-2xl font-semibold text-ink dark:text-paper mb-4">Report Received</h4>
-                <p className="text-slate-600 dark:text-slate-400 max-w-xs mx-auto leading-relaxed">
+                <p className="text-[var(--ink-60)] max-w-xs mx-auto leading-relaxed">
                   Thank you for helping us maintain a safe community. Your report has been securely transmitted and will be reviewed within 48 hours.
                 </p>
                 <button 
@@ -152,35 +152,35 @@ export default function PoliciesSafeguarding() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-xs font-semibold uppercase tracking-widest text-slate-500">Your Name *</label>
+                    <label className="text-xs font-semibold uppercase tracking-widest text-[var(--ink-60)]">Your Name *</label>
                     <input
                       type="text"
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-5 py-3.5 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--cymg-green)] outline-none transition-all text-sm"
+                      className="w-full bg-surface dark:bg-surface/50 border border-line dark:border-white/10 rounded-sm px-5 py-3.5 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--cymg-green)] outline-none transition-all text-sm"
                       placeholder="Or 'Anonymous'"
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-xs font-semibold uppercase tracking-widest text-slate-500">Email Address *</label>
+                    <label className="text-xs font-semibold uppercase tracking-widest text-[var(--ink-60)]">Email Address *</label>
                     <input
                       type="email"
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-5 py-3.5 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--cymg-green)] outline-none transition-all text-sm"
+                      className="w-full bg-surface dark:bg-surface/50 border border-line dark:border-white/10 rounded-sm px-5 py-3.5 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--cymg-green)] outline-none transition-all text-sm"
                       placeholder="For follow-up"
                     />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-semibold uppercase tracking-widest text-slate-500">Concern Category</label>
+                  <label className="text-xs font-semibold uppercase tracking-widest text-[var(--ink-60)]">Concern Category</label>
                   <select
                     value={formData.category}
                     onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                    className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-5 py-3.5 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--cymg-green)] outline-none appearance-none"
+                    className="w-full bg-surface dark:bg-surface/50 border border-line dark:border-white/10 rounded-sm px-5 py-3.5 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--cymg-green)] outline-none appearance-none"
                   >
                     <option value="">Select a category</option>
                     <option value="harassment">Harassment or discrimination</option>
@@ -192,13 +192,13 @@ export default function PoliciesSafeguarding() {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-semibold uppercase tracking-widest text-slate-500">Description *</label>
+                  <label className="text-xs font-semibold uppercase tracking-widest text-[var(--ink-60)]">Description *</label>
                   <textarea
                     required
                     rows={6}
                     value={formData.description}
                     onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                    className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-5 py-3.5 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--cymg-green)] outline-none transition-all text-sm resize-none"
+                    className="w-full bg-surface dark:bg-surface/50 border border-line dark:border-white/10 rounded-sm px-5 py-3.5 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--cymg-green)] outline-none transition-all text-sm resize-none"
                     placeholder="Provide as much detail as possible (dates, people involved, context)..."
                   />
                 </div>
@@ -240,7 +240,7 @@ export default function PoliciesSafeguarding() {
                   )}
                 </button>
                 
-                <p className="text-[10px] text-slate-500 text-center font-bold uppercase tracking-[0.1em]">
+                <p className="text-[10px] text-[var(--ink-60)] text-center font-bold uppercase tracking-[0.1em]">
                   Secure encrypted transmission enabled
                 </p>
               </form>

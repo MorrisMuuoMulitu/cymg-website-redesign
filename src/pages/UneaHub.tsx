@@ -45,7 +45,7 @@ export default function UneaHub() {
             <h2 className="text-2xl md:text-3xl font-semibold text-ink mb-5">
               The world&apos;s highest-level environmental decision-making body
             </h2>
-            <div className="space-y-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+            <div className="space-y-4 text-[var(--ink-60)] leading-relaxed">
               <p>
                 The United Nations Environment Assembly (UNEA) is the paramount global decision-making
                 body dedicated to addressing environmental challenges. Its significance lies in its
@@ -69,7 +69,7 @@ export default function UneaHub() {
             <h2 className="text-2xl md:text-3xl font-semibold text-ink mb-5">
               Committee of Permanent Representatives
             </h2>
-            <div className="space-y-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+            <div className="space-y-4 text-[var(--ink-60)] leading-relaxed">
               <p>
                 The Committee of Permanent Representatives (CPR) is an intersessional subsidiary organ of
                 UNEA. Comprising representatives from member countries, the CPR plays a pivotal role in
@@ -96,7 +96,7 @@ export default function UneaHub() {
           <h2 className="text-2xl md:text-3xl font-semibold text-ink mb-5">
             How CYMG engages at UNEA and CPR
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-slate-600 dark:text-slate-400 leading-relaxed">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-[var(--ink-60)] leading-relaxed">
             <p>
               CYMG, as the designated official engagement mechanism for children and youth in the
               negotiations of UNEA, CPR, and other UNEP processes, plays a pragmatic and influential role

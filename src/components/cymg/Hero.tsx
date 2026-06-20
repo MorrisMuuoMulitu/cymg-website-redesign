@@ -31,7 +31,7 @@ export default function Hero() {
             <div className="flex flex-wrap items-center gap-4">
               <Link
                 to="/join"
-                className="inline-block px-7 py-3.5 text-xs font-bold uppercase tracking-[0.15em] text-[var(--cymg-green-dark)] bg-white hover:bg-white/90 transition-colors"
+                className="inline-block px-7 py-3.5 text-xs font-bold uppercase tracking-[0.15em] text-[var(--cymg-green-dark)] bg-paper hover:bg-paper/90 transition-colors"
               >
                 Join CYMG
               </Link>

@@ -40,7 +40,7 @@ export default function Join() {
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="max-w-xl w-full bg-white dark:bg-slate-900 rounded-sm p-12 text-center border border-line dark:border-white/5"
+          className="max-w-xl w-full bg-paper dark:bg-paper rounded-sm p-12 text-center border border-line dark:border-white/5"
         >
           <div className="w-20 h-20 bg-[var(--cymg-green)]/10 dark:bg-[var(--cymg-green)]/20 rounded-sm flex items-center justify-center mx-auto mb-8 text-[var(--cymg-green)]">
             <CheckCircle size={48} />
@@ -48,7 +48,7 @@ export default function Join() {
           <h1 className="text-4xl font-semibold text-ink dark:text-paper mb-4 ">
             Welcome to the Movement!
           </h1>
-          <p className="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+          <p className="text-lg text-[var(--ink-60)] mb-8 leading-relaxed">
             Your application has been received. Our coordination team will review your details and reach out within 5 business days with onboarding materials.
           </p>
           <a href="/" className="btn-pill bg-[var(--cymg-green)] text-white px-8 py-3.5 font-bold hover:bg-[var(--cymg-green-deep)] transition-all">
@@ -85,13 +85,13 @@ export default function Join() {
             <div key={s} className="flex items-center gap-4 flex-1">
               <div
                 className={`w-12 h-12 rounded-sm flex items-center justify-center text-lg font-semibold transition-all duration-300 ${
-                  step >= s ? 'bg-[var(--cymg-green)] text-white' : 'bg-paper dark:bg-ink text-slate-300 border border-line dark:border-white/10'
+                  step >= s ? 'bg-[var(--cymg-green)] text-white' : 'bg-paper dark:bg-ink text-line border border-line dark:border-white/10'
                 }`}
               >
                 {step > s ? <Check size={20} /> : s}
               </div>
               {s < 3 && (
-                <div className="flex-1 h-1 rounded-sm bg-slate-100 dark:bg-slate-800">
+                <div className="flex-1 h-1 rounded-sm bg-surface dark:bg-surface">
                   <motion.div 
                     initial={{ width: '0%' }}
                     animate={{ width: step > s ? '100%' : '0%' }}
@@ -103,7 +103,7 @@ export default function Join() {
           ))}
         </div>
 
-        <div className="bg-white dark:bg-slate-900 rounded-sm border border-line dark:border-white/5 overflow-hidden">
+        <div className="bg-paper dark:bg-paper rounded-sm border border-line dark:border-white/5 overflow-hidden">
           <form onSubmit={handleSubmit} className="p-10 md:p-16">
             <AnimatePresence mode="wait">
               {step === 1 && (
@@ -121,45 +121,45 @@ export default function Join() {
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="space-y-2">
-                      <label className="text-xs font-semibold uppercase tracking-widest text-slate-500">Full Name *</label>
+                      <label className="text-xs font-semibold uppercase tracking-widest text-[var(--ink-60)]">Full Name *</label>
                       <input
                         type="text"
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-6 py-4 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--cymg-green)] outline-none transition-all"
+                        className="w-full bg-surface dark:bg-surface/50 border border-line dark:border-white/10 rounded-sm px-6 py-4 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--cymg-green)] outline-none transition-all"
                         placeholder="e.g. Jane Doe"
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-xs font-semibold uppercase tracking-widest text-slate-500">Email Address *</label>
+                      <label className="text-xs font-semibold uppercase tracking-widest text-[var(--ink-60)]">Email Address *</label>
                       <input
                         type="email"
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-6 py-4 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--cymg-green)] outline-none transition-all"
+                        className="w-full bg-surface dark:bg-surface/50 border border-line dark:border-white/10 rounded-sm px-6 py-4 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--cymg-green)] outline-none transition-all"
                         placeholder="jane@example.com"
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-xs font-semibold uppercase tracking-widest text-slate-500">Organization / Affiliation</label>
+                      <label className="text-xs font-semibold uppercase tracking-widest text-[var(--ink-60)]">Organization / Affiliation</label>
                       <input
                         type="text"
                         value={formData.organization}
                         onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
-                        className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-6 py-4 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--cymg-green)] outline-none transition-all"
+                        className="w-full bg-surface dark:bg-surface/50 border border-line dark:border-white/10 rounded-sm px-6 py-4 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--cymg-green)] outline-none transition-all"
                         placeholder="Organization name or 'Individual'"
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-xs font-semibold uppercase tracking-widest text-slate-500">Country of Residence *</label>
+                      <label className="text-xs font-semibold uppercase tracking-widest text-[var(--ink-60)]">Country of Residence *</label>
                       <input
                         type="text"
                         required
                         value={formData.country}
                         onChange={(e) => setFormData({ ...formData, country: e.target.value })}
-                        className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-6 py-4 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--cymg-green)] outline-none transition-all"
+                        className="w-full bg-surface dark:bg-surface/50 border border-line dark:border-white/10 rounded-sm px-6 py-4 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--cymg-green)] outline-none transition-all"
                       />
                     </div>
                   </div>
@@ -192,7 +192,7 @@ export default function Join() {
                   </div>
 
                   <div className="space-y-4">
-                    <label className="text-xs font-semibold uppercase tracking-widest text-slate-500">Thematic Working Groups (Select at least one)</label>
+                    <label className="text-xs font-semibold uppercase tracking-widest text-[var(--ink-60)]">Thematic Working Groups (Select at least one)</label>
                     <div className="flex flex-wrap gap-2">
                       {workingGroups.map((wg) => {
                         const selected = formData.workingGroups.includes(wg.id);
@@ -209,7 +209,7 @@ export default function Join() {
                             className={`px-5 py-2.5 rounded-sm text-xs font-bold transition-all border ${
                               selected 
                                 ? 'bg-[var(--cymg-green)] border-[var(--cymg-green)] text-white' 
-                                : 'bg-slate-50 dark:bg-slate-800 border-line dark:border-white/5 text-slate-600 dark:text-slate-400 hover:border-[var(--cymg-green)]'
+                                : 'bg-surface dark:bg-surface border-line dark:border-white/5 text-[var(--ink-60)] hover:border-[var(--cymg-green)]'
                             }`}
                           >
                             {wg.name}
@@ -220,7 +220,7 @@ export default function Join() {
                   </div>
 
                   <div className="space-y-4">
-                    <label className="text-xs font-semibold uppercase tracking-widest text-slate-500">Engagement Interests</label>
+                    <label className="text-xs font-semibold uppercase tracking-widest text-[var(--ink-60)]">Engagement Interests</label>
                     <div className="flex flex-wrap gap-2">
                       {interests.map((interest) => {
                         const selected = formData.interests.includes(interest);
@@ -237,7 +237,7 @@ export default function Join() {
                             className={`px-5 py-2.5 rounded-sm text-xs font-bold transition-all border ${
                               selected 
                                 ? 'bg-[var(--cymg-green)] border-[var(--cymg-green)] text-white' 
-                                : 'bg-slate-50 dark:bg-slate-800 border-line dark:border-white/5 text-slate-600 dark:text-slate-400 hover:border-[var(--cymg-green)]'
+                                : 'bg-surface dark:bg-surface border-line dark:border-white/5 text-[var(--ink-60)] hover:border-[var(--cymg-green)]'
                             }`}
                           >
                             {interest}
@@ -262,19 +262,19 @@ export default function Join() {
                     <h2 className="text-3xl font-semibold text-ink dark:text-paper ">Final Confirmation</h2>
                   </div>
 
-                  <div className="bg-slate-50 dark:bg-slate-800/50 rounded-sm p-8 border border-line dark:border-white/10 space-y-4">
-                    <h3 className="font-semibold uppercase tracking-widest text-xs text-slate-400">Application Summary</h3>
+                  <div className="bg-surface dark:bg-surface/50 rounded-sm p-8 border border-line dark:border-white/10 space-y-4">
+                    <h3 className="font-semibold uppercase tracking-widest text-xs text-line">Application Summary</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
                       <div>
-                        <span className="block text-slate-500 font-medium">Applicant</span>
+                        <span className="block text-[var(--ink-60)] font-medium">Applicant</span>
                         <span className="font-bold text-ink dark:text-paper">{formData.name} ({formData.country})</span>
                       </div>
                       <div>
-                        <span className="block text-slate-500 font-medium">Email</span>
+                        <span className="block text-[var(--ink-60)] font-medium">Email</span>
                         <span className="font-bold text-ink dark:text-paper">{formData.email}</span>
                       </div>
                       <div className="md:col-span-2">
-                        <span className="block text-slate-500 font-medium">Selected Groups</span>
+                        <span className="block text-[var(--ink-60)] font-medium">Selected Groups</span>
                         <span className="font-bold text-ink dark:text-paper">
                           {formData.workingGroups.map((id) => workingGroups.find((wg) => wg.id === id)?.name).join(', ')}
                         </span>
@@ -303,7 +303,7 @@ export default function Join() {
                 <button
                   type="button"
                   onClick={() => setStep(step - 1)}
-                  className="flex items-center gap-2 font-bold text-slate-500 hover:text-ink dark:hover:text-paper transition-colors"
+                  className="flex items-center gap-2 font-bold text-[var(--ink-60)] hover:text-ink dark:hover:text-paper transition-colors"
                 >
                   <ChevronLeft size={20} /> Back
                 </button>
@@ -331,7 +331,7 @@ export default function Join() {
           </form>
         </div>
 
-        <div className="mt-12 text-center text-slate-500 text-sm font-medium flex items-center justify-center gap-2">
+        <div className="mt-12 text-center text-[var(--ink-60)] text-sm font-medium flex items-center justify-center gap-2">
           <HelpCircle size={16} /> Need help with your application? <a href="/contact" className="text-[var(--cymg-green)] font-bold hover:underline">Contact our coordination team</a>
         </div>
       </div>

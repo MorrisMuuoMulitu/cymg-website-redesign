@@ -139,12 +139,12 @@ export default function Governance() {
         </div>
 
         {/* Accountability */}
-        <div className="bg-surface rounded-sm p-12 md:p-16 text-white text-center">
+        <div className="bg-[var(--cymg-green-dark)] rounded-sm p-12 md:p-16 text-white text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-semibold mb-6 ">
               Accountability & <span className="text-[var(--cymg-green)]">Transparency</span>
             </h2>
-            <p className="text-lg text-slate-400 mb-10 leading-relaxed">
+            <p className="text-lg text-white/80 mb-10 leading-relaxed">
               Our annual reports, financial statements, and meeting minutes are public records. We believe that global governance must start with local accountability.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
