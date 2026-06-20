@@ -57,13 +57,12 @@ export default function WorkingGroupDetail() {
               {wg.highlights.map((h, i) => (
                 <div
                   key={i}
-                  className="rounded-sm p-6"
-                  style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
+                  className="rounded-sm p-6 bg-surface border border-line"
                 >
-                  <h3 className="font-display text-lg font-medium mb-2" style={{ color: 'var(--ink)' }}>
+                  <h3 className="font-display text-lg font-medium mb-2 text-ink">
                     {h.title}
                   </h3>
-                  <p className="text-sm" style={{ color: 'var(--ink-60)' }}>{h.excerpt}</p>
+                  <p className="text-sm text-[var(--ink-60)]">{h.excerpt}</p>
                 </div>
               ))}
             </div>
@@ -80,18 +79,17 @@ export default function WorkingGroupDetail() {
               {wg.engagements.map((e, i) => (
                 <div
                   key={i}
-                  className="rounded-sm p-6 flex items-start gap-4"
-                  style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
+                  className="rounded-sm p-6 flex items-start gap-4 bg-surface border border-line"
                 >
                   <div
                     className="w-3 h-3 rounded-sm mt-1.5 flex-shrink-0"
                     style={{ backgroundColor: cluster.color }}
                   />
                   <div>
-                    <h3 className="font-display font-medium mb-1" style={{ color: 'var(--ink)' }}>
+                    <h3 className="font-display font-medium mb-1 text-ink">
                       {e.title}
                     </h3>
-                    <p className="text-sm" style={{ color: 'var(--ink-60)' }}>{e.description}</p>
+                    <p className="text-sm text-[var(--ink-60)]">{e.description}</p>
                   </div>
                 </div>
               ))}
@@ -108,17 +106,15 @@ export default function WorkingGroupDetail() {
             {wg.focalPoints.map((fp, i) => (
               <div
                 key={i}
-                className="rounded-sm p-6"
-                style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
+                className="rounded-sm p-6 bg-surface border border-line"
               >
-                <h3 className="font-display font-medium mb-1" style={{ color: 'var(--ink)' }}>
+                <h3 className="font-display font-medium mb-1 text-ink">
                   {fp.name}
                 </h3>
-                <p className="text-mono-sm mb-3" style={{ color: 'var(--ink-60)' }}>{fp.country}</p>
+                <p className="text-mono-sm mb-3 text-[var(--ink-60)]">{fp.country}</p>
                 <a
                   href={`mailto:${fp.email}`}
-                  className="inline-flex items-center gap-2 text-sm"
-                  style={{ color: 'var(--unep-blue)' }}
+                  className="inline-flex items-center gap-2 text-sm text-[var(--cymg-green)] hover:text-[var(--cymg-green-deep)]"
                 >
                   <Mail size={14} /> {fp.email}
                 </a>

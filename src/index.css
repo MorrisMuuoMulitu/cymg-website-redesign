@@ -8,13 +8,14 @@
   :root {
     --ink: #1e1e1e;
     --paper: #ffffff;
-    --surface: #f5f5f5;
+    --surface: #f7f7f6;
     --line: #e0e0e0;
-    --unep-blue: #00abf1;
-    --unep-blue-deep: #0083b3;
-    --unep-green: #4c9f38;
-    --unep-green-deep: #3a782a;
-    --unep-green-dark: #01724c;
+    --cymg-green: #1e4d32;
+    --cymg-green-deep: #163b26;
+    --cymg-green-dark: #122e1e;
+    --cymg-green-light: #2d5a3d;
+    --cymg-green-bright: #4a7c59;
+    --un-blue: #00abf1;
     --ink-60: rgba(30, 30, 30, 0.6);
 
     --font-display: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -29,7 +30,7 @@
     --card-foreground: 0 0% 12%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 12%;
-    --primary: 196 100% 47%;
+    --primary: 145 45% 21%;
     --primary-foreground: 0 0% 100%;
     --secondary: 0 0% 96%;
     --secondary-foreground: 0 0% 12%;
@@ -41,7 +42,7 @@
     --destructive-foreground: 0 0% 100%;
     --border: 0 0% 88%;
     --input: 0 0% 88%;
-    --ring: 196 100% 47%;
+    --ring: 145 45% 21%;
     --radius: 0;
   }
 
@@ -50,11 +51,12 @@
     --paper: #121212;
     --surface: #1a1a1a;
     --line: #2a2a2a;
-    --unep-blue: #33bfff;
-    --unep-blue-deep: #0095d1;
-    --unep-green: #6db85a;
-    --unep-green-deep: #4c9f38;
-    --unep-green-dark: #1a9364;
+    --cymg-green: #6b9e7c;
+    --cymg-green-deep: #5a8a6a;
+    --cymg-green-dark: #122e1e;
+    --cymg-green-light: #7fb38e;
+    --cymg-green-bright: #8fc79e;
+    --un-blue: #33bfff;
     --ink-60: rgba(242, 242, 242, 0.6);
 
     --background: 0 0% 7%;
@@ -63,7 +65,7 @@
     --card-foreground: 0 0% 95%;
     --popover: 0 0% 7%;
     --popover-foreground: 0 0% 95%;
-    --primary: 196 100% 60%;
+    --primary: 145 30% 55%;
     --primary-foreground: 0 0% 7%;
     --secondary: 0 0% 15%;
     --secondary-foreground: 0 0% 95%;
@@ -75,7 +77,7 @@
     --destructive-foreground: 0 0% 95%;
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 196 100% 60%;
+    --ring: 145 30% 55%;
   }
 
   * {
@@ -93,11 +95,11 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
   }
 
   ::selection {
-    background-color: var(--unep-blue);
+    background-color: var(--cymg-green);
     color: var(--paper);
   }
 }
@@ -182,7 +184,7 @@
   }
 
   .btn-pill:focus-visible {
-    outline: 2px solid var(--unep-blue);
+    outline: 2px solid var(--cymg-green);
     outline-offset: 2px;
   }
 
@@ -191,7 +193,7 @@
     top: -40px;
     left: 0;
     padding: 8px 16px;
-    background: var(--unep-blue);
+    background: var(--cymg-green);
     color: var(--paper);
     font-family: var(--font-mono);
     font-size: 0.75rem;

@@ -29,37 +29,34 @@ export default function PersonCard({
 
   return (
     <div
-      className={cn('card-base overflow-hidden', className)}
+      className={cn('bg-paper border border-line overflow-hidden hover:border-[var(--cymg-green)] transition-colors', className)}
     >
       <div
         className="aspect-square flex items-center justify-center relative overflow-hidden"
         style={{
           background: isVacant
-            ? 'var(--line)'
-            : 'linear-gradient(135deg, #0B1220 0%, #15257A 100%)',
+            ? 'var(--surface)'
+            : 'linear-gradient(135deg, var(--cymg-green-dark) 0%, var(--cymg-green) 100%)',
         }}
       >
         {isVacant ? (
-          <span className="text-mono-label" style={{ color: 'var(--ink-60)' }}>
-            VACANT
+          <span className="text-xs uppercase tracking-[0.1em] text-[var(--ink-60)] font-medium">
+            Vacant
           </span>
         ) : (
-          <span
-            className="font-display text-4xl md:text-5xl font-bold"
-            style={{ color: 'var(--paper)' }}
-          >
+          <span className="font-display text-4xl md:text-5xl font-medium text-paper">
             {initials || '?'}
           </span>
         )}
       </div>
       <div className="p-5 flex flex-col gap-2">
-        <h3 className="font-display text-lg font-medium" style={{ color: 'var(--ink)' }}>
+        <h3 className="font-display text-lg font-medium text-ink">
           {name}
         </h3>
-        <p className="text-sm" style={{ color: 'var(--ink-60)' }}>
+        <p className="text-sm text-[var(--ink-60)] font-light">
           {role}
         </p>
-        <p className="text-mono-sm" style={{ color: 'var(--ink-60)' }}>
+        <p className="text-mono-sm text-[var(--ink-60)]">
           {country}
         </p>
         {tags && tags.length > 0 && (
@@ -67,12 +64,8 @@ export default function PersonCard({
             {tags.map((tag) => (
               <span
                 key={tag}
-                className="text-mono-sm px-2 py-0.5 rounded-full"
-                style={{
-                  backgroundColor: 'var(--line)',
-                  color: 'var(--ink)',
-                  fontSize: '0.65rem',
-                }}
+                className="text-mono-sm px-2 py-0.5 bg-surface text-ink"
+                style={{ fontSize: '0.65rem' }}
               >
                 {tag}
               </span>
@@ -82,8 +75,7 @@ export default function PersonCard({
         {!isVacant && (
           <a
             href={`mailto:${email}`}
-            className="inline-flex items-center gap-1.5 text-sm mt-1 transition-opacity hover:opacity-70"
-            style={{ color: 'var(--unep-blue)' }}
+            className="inline-flex items-center gap-1.5 text-sm mt-1 text-[var(--cymg-green)] hover:text-[var(--cymg-green-deep)] transition-colors"
           >
             <Mail size={14} />
             {email}

@@ -68,7 +68,7 @@ export default function StatCounter({ value, suffix = '', label, detail }: StatC
     <div ref={ref} className="flex flex-col">
       <span
         className="text-display font-display font-bold"
-        style={{ color: 'var(--unep-blue)' }}
+        style={{ color: 'var(--cymg-green)' }}
       >
         {displayValue}
         {suffix}

@@ -42,7 +42,7 @@ export default function Join() {
           animate={{ opacity: 1, scale: 1 }}
           className="max-w-xl w-full bg-white dark:bg-slate-900 rounded-sm p-12 text-center border border-line dark:border-white/5"
         >
-          <div className="w-20 h-20 bg-emerald-100 dark:bg-emerald-900/30 rounded-sm flex items-center justify-center mx-auto mb-8 text-emerald-600">
+          <div className="w-20 h-20 bg-[var(--cymg-green)]/10 dark:bg-[var(--cymg-green)]/20 rounded-sm flex items-center justify-center mx-auto mb-8 text-[var(--cymg-green)]">
             <CheckCircle size={48} />
           </div>
           <h1 className="text-4xl font-semibold text-ink dark:text-paper mb-4 ">
@@ -51,7 +51,7 @@ export default function Join() {
           <p className="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
             Your application has been received. Our coordination team will review your details and reach out within 5 business days with onboarding materials.
           </p>
-          <a href="/" className="btn-pill bg-[var(--unep-blue)] text-white px-8 py-3.5 font-bold hover:bg-[var(--unep-blue-deep)] transition-all">
+          <a href="/" className="btn-pill bg-[var(--cymg-green)] text-white px-8 py-3.5 font-bold hover:bg-[var(--cymg-green-deep)] transition-all">
             Return Home
           </a>
         </motion.div>
@@ -85,7 +85,7 @@ export default function Join() {
             <div key={s} className="flex items-center gap-4 flex-1">
               <div
                 className={`w-12 h-12 rounded-sm flex items-center justify-center text-lg font-semibold transition-all duration-300 ${
-                  step >= s ? 'bg-[var(--unep-blue)] text-white rotate-12' : 'bg-white dark:bg-slate-800 text-slate-300 border border-line dark:border-white/10'
+                  step >= s ? 'bg-[var(--cymg-green)] text-white' : 'bg-paper dark:bg-ink text-slate-300 border border-line dark:border-white/10'
                 }`}
               >
                 {step > s ? <Check size={20} /> : s}
@@ -95,7 +95,7 @@ export default function Join() {
                   <motion.div 
                     initial={{ width: '0%' }}
                     animate={{ width: step > s ? '100%' : '0%' }}
-                    className="h-full bg-[var(--unep-blue)] rounded-sm"
+                    className="h-full bg-[var(--cymg-green)] rounded-sm"
                   />
                 </div>
               )}
@@ -115,7 +115,7 @@ export default function Join() {
                   className="space-y-8"
                 >
                   <div className="flex items-center gap-3 mb-4">
-                    <Rocket className="text-[var(--unep-blue)]" />
+                    <Rocket className="text-[var(--cymg-green)]" />
                     <h2 className="text-3xl font-semibold text-ink dark:text-paper ">Your Essentials</h2>
                   </div>
                   
@@ -127,7 +127,7 @@ export default function Join() {
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-6 py-4 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--unep-blue)] outline-none transition-all"
+                        className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-6 py-4 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--cymg-green)] outline-none transition-all"
                         placeholder="e.g. Jane Doe"
                       />
                     </div>
@@ -138,7 +138,7 @@ export default function Join() {
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-6 py-4 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--unep-blue)] outline-none transition-all"
+                        className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-6 py-4 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--cymg-green)] outline-none transition-all"
                         placeholder="jane@example.com"
                       />
                     </div>
@@ -148,7 +148,7 @@ export default function Join() {
                         type="text"
                         value={formData.organization}
                         onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
-                        className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-6 py-4 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--unep-blue)] outline-none transition-all"
+                        className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-6 py-4 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--cymg-green)] outline-none transition-all"
                         placeholder="Organization name or 'Individual'"
                       />
                     </div>
@@ -159,19 +159,19 @@ export default function Join() {
                         required
                         value={formData.country}
                         onChange={(e) => setFormData({ ...formData, country: e.target.value })}
-                        className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-6 py-4 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--unep-blue)] outline-none transition-all"
+                        className="w-full bg-slate-50 dark:bg-slate-800/50 border border-line dark:border-white/10 rounded-sm px-6 py-4 font-bold text-ink dark:text-paper focus:ring-2 focus:ring-[var(--cymg-green)] outline-none transition-all"
                       />
                     </div>
                   </div>
 
-                  <label className="flex items-center gap-4 cursor-pointer p-6 bg-blue-50 dark:bg-blue-900/20 rounded-sm border border-blue-100 dark:border-blue-900/30">
+                  <label className="flex items-center gap-4 cursor-pointer p-6 bg-[var(--cymg-green)]/5 dark:bg-[var(--cymg-green)]/10 rounded-sm border border-[var(--cymg-green)]/10 dark:border-[var(--cymg-green)]/20">
                     <input
                       type="checkbox"
                       checked={formData.ageVerified}
                       onChange={(e) => setFormData({ ...formData, ageVerified: e.target.checked })}
-                      className="w-6 h-6 rounded-lg border-2 border-[var(--unep-blue)] text-[var(--unep-blue)] focus:ring-offset-0"
+                      className="w-6 h-6 rounded-sm border-2 border-[var(--cymg-green)] text-[var(--cymg-green)] focus:ring-offset-0"
                     />
-                    <span className="text-sm font-bold text-blue-900 dark:text-blue-300 leading-tight">
+                    <span className="text-sm font-bold text-[var(--cymg-green)] dark:text-[var(--cymg-green-bright)] leading-tight">
                       I confirm I am between 15 and 35 years old (the formal youth age range for UN environmental processes).
                     </span>
                   </label>
@@ -187,7 +187,7 @@ export default function Join() {
                   className="space-y-10"
                 >
                   <div className="flex items-center gap-3 mb-4">
-                    <Target className="text-[var(--unep-blue)]" />
+                    <Target className="text-[var(--cymg-green)]" />
                     <h2 className="text-3xl font-semibold text-ink dark:text-paper ">Focus Areas</h2>
                   </div>
 
@@ -206,10 +206,10 @@ export default function Join() {
                                 : [...formData.workingGroups, wg.id];
                               setFormData({ ...formData, workingGroups: updated });
                             }}
-                            className={`px-5 py-2.5 rounded-xl text-xs font-bold transition-all border ${
+                            className={`px-5 py-2.5 rounded-sm text-xs font-bold transition-all border ${
                               selected 
-                                ? 'bg-[var(--unep-blue)] border-[var(--unep-blue)] text-white' 
-                                : 'bg-slate-50 dark:bg-slate-800 border-line dark:border-white/5 text-slate-600 dark:text-slate-400 hover:border-[var(--unep-blue)]'
+                                ? 'bg-[var(--cymg-green)] border-[var(--cymg-green)] text-white' 
+                                : 'bg-slate-50 dark:bg-slate-800 border-line dark:border-white/5 text-slate-600 dark:text-slate-400 hover:border-[var(--cymg-green)]'
                             }`}
                           >
                             {wg.name}
@@ -234,10 +234,10 @@ export default function Join() {
                                 : [...formData.interests, interest];
                               setFormData({ ...formData, interests: updated });
                             }}
-                            className={`px-5 py-2.5 rounded-xl text-xs font-bold transition-all border ${
+                            className={`px-5 py-2.5 rounded-sm text-xs font-bold transition-all border ${
                               selected 
-                                ? 'bg-amber-500 border-amber-500 text-[#0A1128]' 
-                                : 'bg-slate-50 dark:bg-slate-800 border-line dark:border-white/5 text-slate-600 dark:text-slate-400 hover:border-amber-500'
+                                ? 'bg-[var(--cymg-green)] border-[var(--cymg-green)] text-white' 
+                                : 'bg-slate-50 dark:bg-slate-800 border-line dark:border-white/5 text-slate-600 dark:text-slate-400 hover:border-[var(--cymg-green)]'
                             }`}
                           >
                             {interest}
@@ -258,7 +258,7 @@ export default function Join() {
                   className="space-y-10"
                 >
                   <div className="flex items-center gap-3 mb-4">
-                    <Shield className="text-[var(--unep-blue)]" />
+                    <Shield className="text-[var(--cymg-green)]" />
                     <h2 className="text-3xl font-semibold text-ink dark:text-paper ">Final Confirmation</h2>
                   </div>
 
@@ -282,14 +282,14 @@ export default function Join() {
                     </div>
                   </div>
 
-                  <label className="flex items-start gap-4 cursor-pointer p-6 bg-amber-50 dark:bg-amber-900/10 rounded-sm border border-amber-100 dark:border-amber-900/30">
+                  <label className="flex items-start gap-4 cursor-pointer p-6 bg-[var(--cymg-green)]/5 dark:bg-[var(--cymg-green)]/10 rounded-sm border border-[var(--cymg-green)]/10 dark:border-[var(--cymg-green)]/20">
                     <input
                       type="checkbox"
                       checked={formData.termsAccepted}
                       onChange={(e) => setFormData({ ...formData, termsAccepted: e.target.checked })}
-                      className="w-6 h-6 rounded-lg border-2 border-amber-600 text-amber-600 focus:ring-offset-0 mt-1"
+                      className="w-6 h-6 rounded-sm border-2 border-[var(--cymg-green)] text-[var(--cymg-green)] focus:ring-offset-0 mt-1"
                     />
-                    <span className="text-sm font-bold text-amber-900 dark:text-amber-400 leading-tight">
+                    <span className="text-sm font-bold text-[var(--cymg-green)] dark:text-[var(--cymg-green-bright)] leading-tight">
                       I agree to abide by the CYMG Terms of Engagement, Safeguarding Policies, and Code of Conduct. I understand that my participation is voluntary and focused on youth environmental advocacy.
                     </span>
                   </label>
@@ -314,7 +314,7 @@ export default function Join() {
                   type="button"
                   onClick={() => setStep(step + 1)}
                   disabled={!canProceed()}
-                  className="btn-pill bg-[var(--unep-blue)] text-white px-10 py-4 font-semibold hover:scale-105 active:scale-95 disabled:opacity-30 disabled:grayscale transition-all"
+                  className="btn-pill bg-[var(--cymg-green)] text-white px-10 py-4 font-semibold hover:bg-[var(--cymg-green-deep)] disabled:opacity-30 disabled:grayscale transition-all"
                 >
                   Continue <ChevronRight size={20} />
                 </button>
@@ -322,7 +322,7 @@ export default function Join() {
                 <button
                   type="submit"
                   disabled={!canProceed()}
-                  className="btn-pill bg-[var(--unep-green)] text-[#0A1128] px-12 py-4 font-semibold hover:scale-105 active:scale-95 disabled:opacity-30 transition-all"
+                  className="btn-pill bg-[var(--cymg-green)] text-white px-12 py-4 font-semibold hover:bg-[var(--cymg-green-deep)] disabled:opacity-30 transition-all"
                 >
                   Submit Application
                 </button>
@@ -332,7 +332,7 @@ export default function Join() {
         </div>
 
         <div className="mt-12 text-center text-slate-500 text-sm font-medium flex items-center justify-center gap-2">
-          <HelpCircle size={16} /> Need help with your application? <a href="/contact" className="text-[var(--unep-blue)] font-bold hover:underline">Contact our coordination team</a>
+          <HelpCircle size={16} /> Need help with your application? <a href="/contact" className="text-[var(--cymg-green)] font-bold hover:underline">Contact our coordination team</a>
         </div>
       </div>
     </div>

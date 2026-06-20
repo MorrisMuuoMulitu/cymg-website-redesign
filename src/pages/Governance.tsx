@@ -67,7 +67,7 @@ export default function Governance() {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-semibold mt-6 "
           >
-            Institutional <span className="text-[var(--unep-blue)]">Framework</span>
+            Institutional <span className="text-[var(--cymg-green)]">Framework</span>
           </motion.h1>
           <p className="text-lg text-[var(--ink-60)] mt-5 max-w-2xl leading-relaxed">
             A multi-layered structure designed to connect grassroots youth environmental action to the highest levels of global environmental governance.
@@ -78,13 +78,13 @@ export default function Governance() {
       <div className="max-w-[1240px] mx-auto px-6 py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24">
           <div className="lg:col-span-4">
-            <span className="text-[var(--unep-green)] font-medium uppercase tracking-wide text-sm mb-3 block">
+            <span className="text-[var(--cymg-green)] font-medium uppercase tracking-wide text-sm mb-3 block">
               Governance Model
             </span>
             <h2 className="text-2xl md:text-3xl font-semibold text-ink mb-5">
               A commitment to transparent leadership.
             </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
+            <p className="text-lg text-[var(--ink-60)] leading-relaxed mb-8">
               CYMG operates through a decentralized yet coordinated model that ensures youth from every corner of the world can meaningfully participate in policy-making.
             </p>
             <div className="space-y-4">
@@ -95,7 +95,7 @@ export default function Governance() {
                 'Regional and thematic representation',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-3 text-sm font-bold text-ink dark:text-paper">
-                  <CheckCircle2 size={18} className="text-[var(--unep-blue)]" />
+                  <CheckCircle2 size={18} className="text-[var(--cymg-green)]" />
                   {item}
                 </div>
               ))}
@@ -117,18 +117,18 @@ export default function Governance() {
                   className="relative pl-0 md:pl-12"
                 >
                   {/* Dot on line */}
-                  <div className="absolute left-[21px] top-8 w-2.5 h-2.5 rounded-sm bg-[var(--unep-blue)] border-4 border-paper dark:border-ink z-10 hidden md:block" />
+                  <div className="absolute left-[21px] top-8 w-2.5 h-2.5 rounded-sm bg-[var(--cymg-green)] border-4 border-paper dark:border-ink z-10 hidden md:block" />
                   
-                  <div className="bg-white dark:bg-slate-900 p-6 md:p-8 rounded-sm border border-line dark:border-white/5 shadow-sm hover: transition-all group">
+                  <div className="bg-paper dark:bg-ink p-6 md:p-8 border border-line dark:border-white/5 transition-colors group hover:border-[var(--cymg-green)]">
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-2">
-                      <h3 className="text-xl font-semibold text-ink dark:text-paper  group-hover:text-[var(--unep-blue)] transition-colors">
+                      <h3 className="text-xl font-semibold text-ink dark:text-paper  group-hover:text-[var(--cymg-green)] transition-colors">
                         {node.label}
                       </h3>
-                      <span className="text-[10px] font-semibold uppercase tracking-widest px-3 py-1 bg-slate-100 dark:bg-white/5 text-slate-500 rounded-sm w-fit">
+                      <span className="text-[10px] font-semibold uppercase tracking-widest px-3 py-1 bg-surface text-[var(--ink-60)] w-fit">
                         Level {node.level}
                       </span>
                     </div>
-                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed font-medium">
+                    <p className="text-[var(--ink-60)] text-sm leading-relaxed font-medium">
                       {node.description}
                     </p>
                   </div>
@@ -142,7 +142,7 @@ export default function Governance() {
         <div className="bg-surface rounded-sm p-12 md:p-16 text-white text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-semibold mb-6 ">
-              Accountability & <span className="text-[var(--unep-blue)]">Transparency</span>
+              Accountability & <span className="text-[var(--cymg-green)]">Transparency</span>
             </h2>
             <p className="text-lg text-slate-400 mb-10 leading-relaxed">
               Our annual reports, financial statements, and meeting minutes are public records. We believe that global governance must start with local accountability.
@@ -150,7 +150,7 @@ export default function Governance() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 to="/documents"
-                className="btn-pill bg-[var(--unep-blue)] text-white px-10 py-4 font-bold hover:bg-[var(--unep-blue-deep)] transition-all w-full sm:w-auto"
+                className="btn-pill bg-[var(--cymg-green)] text-white px-10 py-4 font-bold hover:bg-[var(--cymg-green-deep)] transition-all w-full sm:w-auto"
               >
                 Browse Public Documents
               </Link>

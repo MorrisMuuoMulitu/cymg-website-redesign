@@ -22,7 +22,7 @@ export default function Contact() {
 
   return (
     <div style={{ backgroundColor: 'var(--paper)' }}>
-      <div className="pt-24 pb-16 px-6" style={{ backgroundColor: 'var(--unep-blue)' }}>
+      <div className="pt-24 pb-16 px-6" style={{ backgroundColor: 'var(--cymg-green)' }}>
         <div className="max-w-[1240px] mx-auto">
           <Breadcrumbs items={[{ label: 'Contact' }]} />
           <h1 className="text-h1 font-display font-bold mt-4" style={{ color: 'var(--paper)' }}>
@@ -43,7 +43,7 @@ export default function Contact() {
                 className="rounded-sm p-8 text-center"
                 style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
               >
-                <Send size={32} className="mx-auto mb-4" style={{ color: 'var(--unep-green)' }} />
+                <Send size={32} className="mx-auto mb-4" style={{ color: 'var(--cymg-green)' }} />
                 <p className="text-body-lg" style={{ color: 'var(--ink)' }}>
                   Message sent! We will get back to you soon.
                 </p>
@@ -59,7 +59,7 @@ export default function Contact() {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl text-sm outline-none focus:ring-2"
+                    className="w-full px-4 py-3 rounded-sm text-sm outline-none focus:ring-2 focus:ring-[var(--cymg-green)]"
                     style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)', color: 'var(--ink)' }}
                   />
                 </div>
@@ -72,7 +72,7 @@ export default function Contact() {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl text-sm outline-none focus:ring-2"
+                    className="w-full px-4 py-3 rounded-sm text-sm outline-none focus:ring-2 focus:ring-[var(--cymg-green)]"
                     style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)', color: 'var(--ink)' }}
                   />
                 </div>
@@ -84,7 +84,7 @@ export default function Contact() {
                     required
                     value={formData.topic}
                     onChange={(e) => setFormData({ ...formData, topic: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl text-sm outline-none focus:ring-2"
+                    className="w-full px-4 py-3 rounded-sm text-sm outline-none focus:ring-2 focus:ring-[var(--cymg-green)]"
                     style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)', color: 'var(--ink)' }}
                   >
                     <option value="">Select a topic</option>
@@ -102,14 +102,14 @@ export default function Contact() {
                     rows={5}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl text-sm outline-none focus:ring-2 resize-none"
+                    className="w-full px-4 py-3 rounded-sm text-sm outline-none focus:ring-2 focus:ring-[var(--cymg-green)] resize-none"
                     style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)', color: 'var(--ink)' }}
                   />
                 </div>
                 <button
                   type="submit"
                   className="btn-pill self-start"
-                  style={{ backgroundColor: 'var(--unep-blue)', color: 'var(--paper)' }}
+                  style={{ backgroundColor: 'var(--cymg-green)', color: 'var(--paper)' }}
                 >
                   Send Message
                 </button>
@@ -136,7 +136,7 @@ export default function Contact() {
                   <contact.icon
                     size={20}
                     className="flex-shrink-0 mt-0.5"
-                    style={{ color: contact.isSensitive ? 'var(--unep-green-deep)' : 'var(--unep-blue)' }}
+                    style={{ color: contact.isSensitive ? 'var(--cymg-green-deep)' : 'var(--cymg-green)' }}
                   />
                   <div>
                     <p className="font-display font-medium mb-1" style={{ color: 'var(--ink)' }}>
@@ -145,12 +145,12 @@ export default function Contact() {
                     <a
                       href={`mailto:${contact.email}`}
                       className="text-sm"
-                      style={{ color: 'var(--unep-blue)' }}
+                      style={{ color: 'var(--cymg-green)' }}
                     >
                       {contact.email}
                     </a>
                     {contact.isSensitive && (
-                      <p className="text-xs mt-1" style={{ color: 'var(--unep-green-deep)' }}>
+                      <p className="text-xs mt-1" style={{ color: 'var(--cymg-green-deep)' }}>
                         This is a confidential channel for safeguarding reports.
                       </p>
                     )}
@@ -164,7 +164,7 @@ export default function Contact() {
               style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
             >
               <div className="flex items-center gap-2 mb-4">
-                <MapPin size={18} style={{ color: 'var(--unep-green)' }} />
+                <MapPin size={18} style={{ color: 'var(--cymg-green)' }} />
                 <h3 className="font-display font-medium" style={{ color: 'var(--ink)' }}>
                   Global Presence
                 </h3>

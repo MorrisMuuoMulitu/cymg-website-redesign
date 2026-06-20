@@ -4,10 +4,10 @@ import { Calendar as CalIcon, List, MapPin, Clock } from 'lucide-react';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 
 const categoryColors: Record<string, string> = {
-  'working-group': '#E2592C',
-  'unea': '#2A4DFF',
-  'mea': '#0E6B55',
-  'yea': '#D7FF3D',
+  'working-group': '#1e4d32',
+  'unea': '#163b26',
+  'mea': '#2d5a3d',
+  'yea': '#4a7c59',
 };
 
 const categoryLabels: Record<string, string> = {
@@ -33,7 +33,7 @@ export default function Calendar() {
 
   return (
     <div style={{ backgroundColor: 'var(--paper)' }}>
-      <div className="pt-24 pb-16 px-6" style={{ backgroundColor: 'var(--unep-green)' }}>
+      <div className="pt-24 pb-16 px-6" style={{ backgroundColor: 'var(--cymg-green)' }}>
         <div className="max-w-[1240px] mx-auto">
           <Breadcrumbs items={[{ label: 'Calendar' }]} />
           <h1 className="text-h1 font-display font-bold mt-4" style={{ color: 'var(--paper)' }}>
@@ -50,7 +50,7 @@ export default function Calendar() {
               onClick={() => setView('month')}
               className="flex items-center gap-2 px-4 py-2 rounded-sm text-mono-sm transition-all"
               style={{
-                backgroundColor: view === 'month' ? 'var(--unep-blue)' : 'var(--surface)',
+                backgroundColor: view === 'month' ? 'var(--cymg-green)' : 'var(--surface)',
                 color: view === 'month' ? 'var(--paper)' : 'var(--ink)',
                 border: view === 'month' ? 'none' : '1px solid var(--line)',
               }}
@@ -61,7 +61,7 @@ export default function Calendar() {
               onClick={() => setView('list')}
               className="flex items-center gap-2 px-4 py-2 rounded-sm text-mono-sm transition-all"
               style={{
-                backgroundColor: view === 'list' ? 'var(--unep-blue)' : 'var(--surface)',
+                backgroundColor: view === 'list' ? 'var(--cymg-green)' : 'var(--surface)',
                 color: view === 'list' ? 'var(--paper)' : 'var(--ink)',
                 border: view === 'list' ? 'none' : '1px solid var(--line)',
               }}
@@ -186,7 +186,7 @@ export default function Calendar() {
                 return (
                   <div
                     key={i}
-                    className="aspect-square rounded-xl p-1 flex flex-col items-center justify-start gap-1"
+                    className="aspect-square rounded-sm p-1 flex flex-col items-center justify-start gap-1"
                     style={{
                       backgroundColor: day > 0 ? 'var(--paper)' : 'transparent',
                       border: day > 0 ? '1px solid var(--line)' : 'none',

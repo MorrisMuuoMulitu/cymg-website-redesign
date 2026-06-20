@@ -4,10 +4,8 @@
  */
 
 // ─── Working Groups ──────────────────────────────────────────────
-// Cluster color mapping:
-//   pollution/chemicals → clay (#E2592C)
-//   nature/ocean → canopy-green (#0E6B55)
-//   policy/governance/finance → assembly-blue (#2A4DFF)
+// Cluster color mapping uses the CYMG green family so the interface stays
+// cohesive and official. We still keep the three clusters for filtering.
 
 export type WGCluster = "pollution" | "nature" | "policy";
 
@@ -143,9 +141,9 @@ export const WORKING_GROUPS: WorkingGroup[] = [
 export const WG_COUNT = WORKING_GROUPS.length; // 13
 
 export const CLUSTER_COLORS: Record<WGCluster, { bg: string; text: string; darkBg: string; darkText: string }> = {
-  pollution: { bg: "bg-clay/10", text: "text-clay", darkBg: "dark:bg-clay/20", darkText: "dark:text-clay" },
-  nature: { bg: "bg-canopy-green/10", text: "text-canopy-green", darkBg: "dark:bg-canopy-green/20", darkText: "dark:text-canopy-green" },
-  policy: { bg: "bg-assembly-blue/10", text: "text-assembly-blue", darkBg: "dark:bg-assembly-blue/20", darkText: "dark:text-assembly-blue" },
+  pollution: { bg: "bg-[var(--cymg-green-light)]/10", text: "text-[var(--cymg-green)]", darkBg: "dark:bg-[var(--cymg-green-light)]/20", darkText: "dark:text-[var(--cymg-green-light)]" },
+  nature: { bg: "bg-[var(--cymg-green)]/10", text: "text-[var(--cymg-green)]", darkBg: "dark:bg-[var(--cymg-green)]/20", darkText: "dark:text-[var(--cymg-green-light)]" },
+  policy: { bg: "bg-[var(--cymg-green-deep)]/10", text: "text-[var(--cymg-green-deep)]", darkBg: "dark:bg-[var(--cymg-green-deep)]/20", darkText: "dark:text-[var(--cymg-green-light)]" },
 };
 
 // ─── Timeline Milestones ─────────────────────────────────────────
@@ -466,6 +464,7 @@ export interface BlogPost {
   readTime: string;
   tags: string[];
   featured: boolean;
+  featuredImage?: string;
 }
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -479,6 +478,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "8 min",
     tags: ["Resolution Recap Series", "UNEA-6", "Policy"],
     featured: true,
+    featuredImage: "/images/bento/resolution-recap.jpg",
   },
   {
     slug: "youth-environment-assembly-2024-recap",
@@ -490,6 +490,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "6 min",
     tags: ["YEA", "Youth Declaration", "UNEA-6"],
     featured: false,
+    featuredImage: "/images/photo-essay/yea-session.jpg",
   },
   {
     slug: "plastics-treaty-youth-perspectives",
@@ -501,6 +502,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "5 min",
     tags: ["Plastics", "YPAN", "Treaty Negotiations"],
     featured: false,
+    featuredImage: "/images/bento/chemicals-waste.jpg",
   },
 ];
 

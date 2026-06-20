@@ -53,7 +53,7 @@ export default function BlogPost() {
           <div className="flex items-center gap-3">
             <div
               className="w-10 h-10 rounded-sm flex items-center justify-center font-display text-sm font-bold"
-              style={{ background: 'linear-gradient(135deg, #0B1220, #15257A)', color: 'var(--paper)' }}
+              style={{ background: 'linear-gradient(135deg, var(--cymg-green-dark), var(--cymg-green))', color: 'var(--paper)' }}
             >
               {post.author.name.split(' ').map((w) => w[0]).slice(0, 2).join('')}
             </div>
@@ -102,7 +102,7 @@ export default function BlogPost() {
                 <ul key={i} className="flex flex-col gap-2 my-4">
                   {items.map((item, j) => (
                     <li key={j} className="flex items-start gap-2 text-sm leading-relaxed" style={{ color: 'var(--ink)' }}>
-                      <div className="w-1.5 h-1.5 rounded-sm mt-1.5 flex-shrink-0" style={{ backgroundColor: 'var(--unep-blue)' }} />
+                      <div className="w-1.5 h-1.5 rounded-sm mt-1.5 flex-shrink-0" style={{ backgroundColor: 'var(--cymg-green)' }} />
                       {item.replace(/^[-\d.]+\s*/, '')}
                     </li>
                   ))}
@@ -158,7 +158,7 @@ export default function BlogPost() {
           >
             <div
               className="w-14 h-14 rounded-sm flex-shrink-0 flex items-center justify-center font-display text-lg font-bold"
-              style={{ background: 'linear-gradient(135deg, #0B1220, #15257A)', color: 'var(--paper)' }}
+              style={{ background: 'linear-gradient(135deg, var(--cymg-green-dark), var(--cymg-green))', color: 'var(--paper)' }}
             >
               {post.author.name.split(' ').map((w) => w[0]).slice(0, 2).join('')}
             </div>
@@ -184,7 +184,7 @@ export default function BlogPost() {
                 <Link
                   key={rp.id}
                   to={`/blog/${rp.slug}`}
-                  className="rounded-sm p-5 transition-shadow hover:shadow-md"
+                  className="rounded-sm p-5 transition-colors hover:border-[var(--cymg-green)]"
                   style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
                 >
                   <p className="font-display font-medium mb-2" style={{ color: 'var(--ink)' }}>

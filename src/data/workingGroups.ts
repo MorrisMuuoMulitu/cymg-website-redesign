@@ -246,9 +246,9 @@ export const workingGroups: WorkingGroup[] = [
 ];
 
 export const clusterColors = {
-  pollution: { color: '#E2592C', label: 'Pollution \u0026 Chemicals' },
-  nature: { color: '#0E6B55', label: 'Nature \u0026 Ocean' },
-  policy: { color: '#2A4DFF', label: 'Policy \u0026 Governance' },
+  pollution: { color: '#2d5a3d', label: 'Pollution \u0026 Chemicals' },
+  nature: { color: '#1e4d32', label: 'Nature \u0026 Ocean' },
+  policy: { color: '#163b26', label: 'Policy \u0026 Governance' },
 };
 
 export const clusterFilters = [

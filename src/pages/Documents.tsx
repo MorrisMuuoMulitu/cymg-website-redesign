@@ -5,10 +5,10 @@ import Badge from '@/components/ui/Badge';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 
 const typeColors: Record<string, string> = {
-  policy: '#2A4DFF',
-  resolution: '#0E6B55',
-  report: '#E2592C',
-  declaration: '#D7FF3D',
+  policy: '#1e4d32',
+  resolution: '#163b26',
+  report: '#2d5a3d',
+  declaration: '#4a7c59',
 };
 
 export default function Documents() {
@@ -30,7 +30,7 @@ export default function Documents() {
 
   return (
     <div style={{ backgroundColor: 'var(--paper)' }}>
-      <div className="pt-24 pb-16 px-6" style={{ backgroundColor: 'var(--unep-blue)' }}>
+      <div className="pt-24 pb-16 px-6" style={{ backgroundColor: 'var(--cymg-green)' }}>
         <div className="max-w-[1240px] mx-auto">
           <Breadcrumbs items={[{ label: 'Documents' }]} />
           <h1 className="text-h1 font-display font-bold mt-4" style={{ color: 'var(--paper)' }}>
@@ -49,7 +49,7 @@ export default function Documents() {
                 onClick={() => setTypeFilter(f.value)}
                 className="text-mono-sm px-4 py-2 rounded-sm transition-all"
                 style={{
-                  backgroundColor: typeFilter === f.value ? 'var(--unep-blue)' : 'var(--surface)',
+                  backgroundColor: typeFilter === f.value ? 'var(--cymg-green)' : 'var(--surface)',
                   color: typeFilter === f.value ? 'var(--paper)' : 'var(--ink)',
                   border: typeFilter === f.value ? 'none' : '1px solid var(--line)',
                 }}
@@ -88,12 +88,12 @@ export default function Documents() {
             >
               <div className="flex items-start gap-3 mb-4">
                 <div
-                  className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
-                  style={{ backgroundColor: (typeColors[doc.type] || '#2A4DFF') + '15' }}
+                  className="w-10 h-10 rounded-sm flex items-center justify-center flex-shrink-0"
+                  style={{ backgroundColor: (typeColors[doc.type] || '#1e4d32') + '15' }}
                 >
-                  <FileText size={18} style={{ color: typeColors[doc.type] || '#2A4DFF' }} />
+                  <FileText size={18} style={{ color: typeColors[doc.type] || '#1e4d32' }} />
                 </div>
-                <Badge color={typeColors[doc.type] || '#2A4DFF'}>
+                <Badge color={typeColors[doc.type] || '#1e4d32'}>
                   {doc.type.charAt(0).toUpperCase() + doc.type.slice(1)}
                 </Badge>
               </div>
@@ -111,14 +111,14 @@ export default function Documents() {
                 <div className="flex gap-2">
                   <button
                     className="p-2 rounded-sm transition-opacity hover:opacity-70"
-                    style={{ color: 'var(--unep-blue)' }}
+                    style={{ color: 'var(--cymg-green)' }}
                     aria-label="View"
                   >
                     <Eye size={16} />
                   </button>
                   <button
                     className="p-2 rounded-sm transition-opacity hover:opacity-70"
-                    style={{ color: 'var(--unep-blue)' }}
+                    style={{ color: 'var(--cymg-green)' }}
                     aria-label="Download"
                   >
                     <Download size={16} />

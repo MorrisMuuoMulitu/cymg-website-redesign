@@ -6,15 +6,15 @@ interface BadgeProps {
   className?: string;
 }
 
-export default function Badge({ children, color = 'var(--unep-blue)', className }: BadgeProps) {
+export default function Badge({ children, color = 'var(--cymg-green)', className }: BadgeProps) {
   return (
     <span
       className={cn(
-        'text-mono-sm inline-block px-3 py-1 rounded-full',
+        'text-mono-sm inline-block px-2.5 py-0.5',
         className
       )}
       style={{
-        backgroundColor: color + '18',
+        backgroundColor: color + '15',
         color,
       }}
     >

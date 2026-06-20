@@ -85,7 +85,7 @@ const historyEntries = [
 export default function HistoryMandate() {
   return (
     <div style={{ backgroundColor: 'var(--paper)' }}>
-      <div className="pt-24 pb-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: 'var(--unep-blue)' }}>
+      <div className="pt-24 pb-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: 'var(--cymg-green)' }}>
         <div className="max-w-[1240px] mx-auto">
           <Breadcrumbs items={[{ label: 'About', href: '/about' }, { label: 'History & Mandate' }]} />
           <h1 className="text-h1 font-display font-bold mt-4" style={{ color: 'var(--paper)' }}>
@@ -116,12 +116,12 @@ export default function HistoryMandate() {
               <div className="flex-shrink-0 w-12 md:w-24 flex justify-end">
                 <div
                   className="w-3 h-3 rounded-sm mt-2 relative z-10"
-                  style={{ backgroundColor: 'var(--unep-blue)' }}
+                  style={{ backgroundColor: 'var(--cymg-green)' }}
                 />
               </div>
 
               <div
-                className="flex-1 rounded-sm p-6 md:p-8 transition-shadow hover:shadow-md"
+                className="flex-1 rounded-sm p-6 md:p-8"
                 style={{
                   backgroundColor: 'var(--surface)',
                   border: '1px solid var(--line)',
@@ -129,7 +129,7 @@ export default function HistoryMandate() {
               >
                 <span
                   className="text-mono-label font-medium"
-                  style={{ color: 'var(--unep-blue)' }}
+                  style={{ color: 'var(--cymg-green)' }}
                 >
                   {event.year}
                 </span>
@@ -172,7 +172,7 @@ export default function HistoryMandate() {
             {MANDATE_REFS.map((mandate) => (
               <div
                 key={mandate.code}
-                className="rounded-xl p-5"
+                className="rounded-sm p-5"
                 style={{
                   backgroundColor: 'var(--surface)',
                   border: '1px solid var(--line)',
@@ -181,8 +181,8 @@ export default function HistoryMandate() {
                 <code
                   className="font-mono text-xs px-2 py-1 rounded"
                   style={{
-                    color: 'var(--unep-blue)',
-                    backgroundColor: 'rgba(42,77,255,0.1)',
+                    color: 'var(--cymg-green)',
+                    backgroundColor: 'rgba(30,77,50,0.1)',
                   }}
                 >
                   {mandate.code}

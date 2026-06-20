@@ -23,7 +23,7 @@ export default function Regions() {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-semibold mt-6 "
           >
-            Global <span className="text-[var(--unep-blue)]">Regions</span>
+            Global <span className="text-[var(--cymg-green)]">Regions</span>
           </motion.h1>
           <p className="text-lg text-[var(--ink-60)] mt-5 max-w-3xl leading-relaxed">
             Organized across 6 UNEP regions plus special seats, ensuring local perspectives reach the highest levels of global environmental governance.
@@ -42,8 +42,8 @@ export default function Regions() {
                   onClick={() => setSelectedRegion(region.id === selectedRegion ? null : region.id)}
                   className={`text-left rounded-sm px-6 py-5 transition-all duration-300 border ${
                     selectedRegion === region.id
-                      ? 'bg-[var(--unep-blue)] border-[var(--unep-blue)] text-white scale-[1.02]'
-                      : 'bg-white dark:bg-slate-900 border-line dark:border-white/5 text-ink dark:text-paper hover:border-[var(--unep-blue)] hover:shadow-md'
+                      ? 'bg-[var(--cymg-green)] border-[var(--cymg-green)] text-white'
+                      : 'bg-white dark:bg-slate-900 border-line dark:border-white/5 text-ink dark:text-paper hover:border-[var(--cymg-green)]'
                   }`}
                 >
                   <div className="flex items-center justify-between">
@@ -52,7 +52,7 @@ export default function Regions() {
                     </span>
                     {region.type === 'special' ? (
                       <span className={`text-[10px] font-semibold uppercase tracking-widest px-2 py-0.5 rounded-sm ${
-                        selectedRegion === region.id ? 'bg-white/20 text-white' : 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400'
+                        selectedRegion === region.id ? 'bg-white/20 text-white' : 'bg-[var(--cymg-green)]/10 text-[var(--cymg-green)]'
                       }`}>
                         Special
                       </span>
@@ -82,7 +82,7 @@ export default function Regions() {
                         {activeRegion.name}
                       </h2>
                       {activeRegion.type === 'special' && (
-                        <span className="text-amber-600 dark:text-amber-400 font-bold uppercase tracking-widest text-xs">
+                        <span className="text-[var(--cymg-green)] font-bold uppercase tracking-widest text-xs">
                           Liaison / Host Seat
                         </span>
                       )}
@@ -104,7 +104,7 @@ export default function Regions() {
                       {facilitator && !facilitator.isVacant ? (
                         <div className="bg-slate-50 dark:bg-slate-800/50 p-6 rounded-sm border border-line dark:border-white/5">
                           <div className="flex items-center gap-4 mb-4">
-                            <div className="w-16 h-16 rounded-sm bg-[var(--unep-blue)] flex items-center justify-center text-white text-2xl font-semibold">
+                            <div className="w-16 h-16 rounded-sm bg-[var(--cymg-green)] flex items-center justify-center text-white text-2xl font-semibold">
                               {facilitator.name.split(' ').map((w) => w[0]).slice(0, 2).join('')}
                             </div>
                             <div>
@@ -118,7 +118,7 @@ export default function Regions() {
                           </div>
                           <a
                             href={`mailto:${facilitator.email}`}
-                            className="btn-pill w-full bg-white dark:bg-slate-900 border border-line dark:border-white/5 justify-center py-2.5 hover:bg-[var(--unep-blue)] hover:text-white transition-all text-sm font-bold"
+                            className="btn-pill w-full bg-white dark:bg-slate-900 border border-line dark:border-white/5 justify-center py-2.5 hover:bg-[var(--cymg-green)] hover:text-white transition-all text-sm font-bold"
                           >
                             <Mail size={16} /> Contact Facilitator
                           </a>
@@ -126,7 +126,7 @@ export default function Regions() {
                       ) : (
                         <div className="p-8 rounded-sm border-2 border-dashed border-line dark:border-white/10 text-center">
                           <p className="text-sm text-slate-500 italic mb-4">Facilitator position currently vacant.</p>
-                          <a href="/join" className="text-sm font-semibold text-[var(--unep-blue)] hover:underline">Apply to Volunteer</a>
+                          <a href="/join" className="text-sm font-semibold text-[var(--cymg-green)] hover:underline">Apply to Volunteer</a>
                         </div>
                       )}
                     </div>
@@ -140,7 +140,7 @@ export default function Regions() {
                         <ul className="space-y-3">
                           {activeRegion.initiatives.map((init) => (
                             <li key={init} className="flex items-start gap-3 text-sm font-medium text-slate-600 dark:text-slate-400 leading-relaxed">
-                              <CheckCircle2 size={16} className="text-emerald-500 shrink-0 mt-0.5" />
+                              <CheckCircle2 size={16} className="text-[var(--cymg-green)] shrink-0 mt-0.5" />
                               {init}
                             </li>
                           ))}
@@ -154,7 +154,7 @@ export default function Regions() {
                         <ul className="space-y-3">
                           {activeRegion.events.map((evt) => (
                             <li key={evt.title} className="flex items-center gap-3 text-sm font-medium text-ink dark:text-paper">
-                              <Calendar size={16} className="text-[var(--unep-blue)]" />
+                              <Calendar size={16} className="text-[var(--cymg-green)]" />
                               <span>{evt.title}</span>
                               <span className="text-[10px] font-bold text-slate-400 bg-slate-100 dark:bg-white/5 px-2 py-0.5 rounded-sm ml-auto">{evt.date}</span>
                             </li>

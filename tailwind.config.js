@@ -5,9 +5,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ink: "#0A1128",
-      "unep-blue": "#00abf1",
-      "unep-green": "#4c9f38",
+        ink: "#1e1e1e",
+        "cymg-green": "#1e4d32",
+        "cymg-green-deep": "#163b26",
+        "cymg-green-dark": "#122e1e",
+        "cymg-green-light": "#2d5a3d",
+        "cymg-green-bright": "#4a7c59",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

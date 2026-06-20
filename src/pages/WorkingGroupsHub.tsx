@@ -6,14 +6,19 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { motion } from 'framer-motion';
 import { Layers, ShieldCheck, Zap, ArrowRight } from 'lucide-react';
 
+const clusterIconStyles: Record<string, { icon: typeof ShieldCheck; color: string }> = {
+  pollution: { icon: ShieldCheck, color: 'var(--cymg-green-bright)' },
+  nature: { icon: Layers, color: 'var(--cymg-green-light)' },
+  policy: { icon: Zap, color: 'var(--cymg-green)' },
+};
+
 function WgBadgeIcon({ cluster }: { cluster: string }) {
+  const { icon: Icon, color } = clusterIconStyles[cluster] || clusterIconStyles.policy;
   return (
     <div
-      className="w-14 h-14 rounded-sm flex items-center justify-center mb-6 shadow-sm border border-line dark:border-white/5 bg-white dark:bg-slate-800"
+      className="w-14 h-14 flex items-center justify-center mb-6 border border-line bg-paper"
     >
-      {cluster === 'pollution' && <ShieldCheck size={28} className="text-amber-500" />}
-      {cluster === 'nature' && <Layers size={28} className="text-emerald-500" />}
-      {cluster === 'policy' && <Zap size={28} className="text-blue-500" />}
+      <Icon size={28} style={{ color }} />
     </div>
   );
 }
@@ -27,7 +32,7 @@ export default function WorkingGroupsHub() {
   }, [activeFilter]);
 
   return (
-    <div className="bg-paper dark:bg-ink min-h-screen">
+    <div className="bg-paper min-h-screen">
       {/* Hero */}
       <div className="pt-16 pb-14 px-4 sm:px-6 lg:px-8 bg-surface border-b border-line text-ink">
         <div className="max-w-[1240px] mx-auto">
@@ -35,27 +40,27 @@ export default function WorkingGroupsHub() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl font-semibold mt-6 "
+            className="text-4xl md:text-5xl font-medium mt-6"
           >
-            Thematic <span className="text-[var(--unep-blue)]">Working Groups</span>
+            Thematic <span className="text-[var(--cymg-green)]">Working Groups</span>
           </motion.h1>
-          <p className="text-lg text-[var(--ink-60)] mt-5 max-w-3xl leading-relaxed">
-            Thirteen specialized groups coordinating global youth voices across every major environmental priority.
+          <p className="text-lg text-[var(--ink-60)] font-light mt-5 max-w-3xl leading-relaxed">
+            Thirteen specialised groups coordinating global youth voices across every major environmental priority.
           </p>
         </div>
       </div>
 
-      <div className="max-w-[1240px] mx-auto px-6 py-16">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Filter */}
-        <div className="flex flex-wrap gap-2 mb-12 bg-white dark:bg-slate-900 p-4 rounded-sm border border-line dark:border-white/5">
+        <div className="flex flex-wrap gap-2 mb-12 bg-paper p-4 border border-line">
           {clusterFilters.map((f) => (
             <button
               key={f.value}
               onClick={() => setActiveFilter(f.value)}
-              className={`px-6 py-2.5 rounded-sm text-xs font-semibold uppercase tracking-widest transition-all ${
+              className={`px-5 py-2 text-xs font-medium uppercase tracking-[0.1em] transition-colors ${
                 activeFilter === f.value
-                  ? 'bg-[var(--unep-blue)] text-white'
-                  : 'bg-transparent text-slate-500 hover:text-[var(--unep-blue)]'
+                  ? 'bg-[var(--cymg-green)] text-white'
+                  : 'bg-transparent text-[var(--ink-60)] hover:text-[var(--cymg-green)]'
               }`}
             >
               {f.label}
@@ -64,7 +69,7 @@ export default function WorkingGroupsHub() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map((wg, i) => (
             <motion.div
               key={wg.id}
@@ -75,20 +80,20 @@ export default function WorkingGroupsHub() {
             >
               <Link
                 to={`/working-groups/${wg.slug}`}
-                className="group bg-white dark:bg-slate-900 rounded-sm p-10 flex flex-col items-start transition-all duration-500 border border-line dark:border-white/5 shadow-sm hover: hover:-translate-y-2 h-full"
+                className="group bg-paper border border-line hover:border-[var(--cymg-green)] p-8 flex flex-col items-start transition-colors h-full"
               >
                 <WgBadgeIcon cluster={wg.cluster} />
-                <Badge className="bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 border-none font-semibold text-[10px] tracking-widest mb-4">
+                <Badge className="bg-surface text-[var(--cymg-green)] border-none font-medium text-[10px] tracking-widest uppercase mb-4">
                   {clusterColors[wg.cluster].label}
                 </Badge>
-                <h3 className="text-2xl font-semibold text-ink dark:text-paper mb-4 leading-tight group-hover:text-[var(--unep-blue)] transition-colors">
+                <h3 className="text-xl font-medium text-ink mb-3 leading-tight group-hover:text-[var(--cymg-green)] transition-colors">
                   {wg.name}
                 </h3>
-                <p className="text-slate-600 dark:text-slate-400 leading-relaxed font-medium mb-8 flex-1">
+                <p className="text-[var(--ink-60)] leading-relaxed font-light mb-6 flex-1">
                   {wg.description}
                 </p>
-                <div className="flex items-center gap-2 text-sm font-semibold text-[var(--unep-blue)] uppercase tracking-widest">
-                  View Detail <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.1em] text-[var(--cymg-green)] group-hover:text-[var(--cymg-green-deep)] transition-colors">
+                  View detail <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </div>
               </Link>
             </motion.div>

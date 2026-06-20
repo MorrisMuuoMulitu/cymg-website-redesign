@@ -62,7 +62,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 text-[var(--ink-60)] hover:text-[var(--unep-blue)] transition-colors"
+                  className="p-2 text-[var(--ink-60)] hover:text-[var(--cymg-green)] transition-colors"
                   aria-label={social.label}
                 >
                   <social.icon size={18} />
@@ -81,7 +81,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link
                       to={link.href}
-                      className="text-sm text-ink hover:text-[var(--unep-blue)] transition-colors"
+                      className="text-sm text-ink hover:text-[var(--cymg-green)] transition-colors"
                     >
                       {link.label}
                     </Link>

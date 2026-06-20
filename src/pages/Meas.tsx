@@ -15,7 +15,7 @@ const resources = [
 export default function Meas() {
   return (
     <div style={{ backgroundColor: 'var(--paper)' }}>
-      <div className="pt-24 pb-16 px-6" style={{ backgroundColor: 'var(--unep-green)' }}>
+      <div className="pt-24 pb-16 px-6" style={{ backgroundColor: 'var(--cymg-green)' }}>
         <div className="max-w-[1240px] mx-auto">
           <Breadcrumbs items={[{ label: 'MEAs' }]} />
           <h1 className="text-h1 font-display font-bold mt-4" style={{ color: 'var(--paper)' }}>
@@ -71,7 +71,7 @@ export default function Meas() {
                 'Minamata Convention on Mercury',
               ].map((mea) => (
                 <li key={mea} className="flex items-center gap-2 text-sm" style={{ color: 'var(--ink)' }}>
-                  <div className="w-1.5 h-1.5 rounded-sm flex-shrink-0" style={{ backgroundColor: 'var(--unep-green)' }} />
+                  <div className="w-1.5 h-1.5 rounded-sm flex-shrink-0" style={{ backgroundColor: 'var(--cymg-green)' }} />
                   {mea}
                 </li>
               ))}
@@ -125,7 +125,7 @@ export default function Meas() {
                 className="rounded-sm p-6"
                 style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
               >
-                <e.icon size={24} className="mb-4" style={{ color: 'var(--unep-green)' }} />
+                <e.icon size={24} className="mb-4" style={{ color: 'var(--cymg-green)' }} />
                 <h3 className="font-display text-lg font-medium mb-2" style={{ color: 'var(--ink)' }}>
                   {e.title}
                 </h3>
@@ -147,10 +147,10 @@ export default function Meas() {
                 href={r.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-sm p-6 flex items-start gap-4 transition-shadow hover:shadow-md"
+                className="rounded-sm p-6 flex items-start gap-4 transition-colors hover:border-[var(--cymg-green)]"
                 style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--line)' }}
               >
-                <ExternalLink size={20} className="flex-shrink-0 mt-0.5" style={{ color: 'var(--unep-blue)' }} />
+                <ExternalLink size={20} className="flex-shrink-0 mt-0.5" style={{ color: 'var(--cymg-green)' }} />
                 <div>
                   <h3 className="font-display font-medium mb-1" style={{ color: 'var(--ink)' }}>
                     {r.title}

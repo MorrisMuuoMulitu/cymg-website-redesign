@@ -11,7 +11,7 @@ export default function NotFound() {
         <h1
           className="font-display font-bold leading-none mb-4"
           style={{
-            color: 'var(--unep-blue)',
+            color: 'var(--cymg-green)',
             fontSize: 'clamp(6rem, 15vw, 12rem)',
           }}
         >
@@ -27,7 +27,7 @@ export default function NotFound() {
           <Link
             to="/"
             className="btn-pill inline-flex items-center justify-center gap-2"
-            style={{ backgroundColor: 'var(--unep-blue)', color: 'var(--paper)' }}
+            style={{ backgroundColor: 'var(--cymg-green)', color: 'var(--paper)' }}
           >
             <Home size={16} /> Back to Home
           </Link>

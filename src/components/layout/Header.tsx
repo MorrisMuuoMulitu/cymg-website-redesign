@@ -38,17 +38,17 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-paper border-b border-line">
       {/* Top utility bar */}
-      <div className="bg-[var(--unep-green-dark)] text-white text-xs">
+      <div className="bg-[var(--cymg-green-dark)] text-white text-[11px] uppercase tracking-[0.08em]">
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 h-8 flex items-center justify-between">
-          <span className="hidden sm:inline font-light italic opacity-90">
+          <span className="hidden sm:inline font-light opacity-90">
             Save the planet. Opt not to print.
           </span>
-          <nav className="flex items-center gap-4 ml-auto" aria-label="Utility navigation">
+          <nav className="flex items-center gap-5 ml-auto" aria-label="Utility navigation">
             {utilityNav.map((item) => (
               <Link
                 key={item.href}
                 to={item.href}
-                className="hover:underline font-light"
+                className="hover:opacity-80 transition-opacity font-light"
               >
                 {item.label}
               </Link>
@@ -58,8 +58,8 @@ export default function Header() {
       </div>
 
       {/* Main header */}
-      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-        <Link to="/" className="shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--unep-blue)]">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 h-[72px] flex items-center justify-between">
+        <Link to="/" className="shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--cymg-green)]">
           <img
             src="/cymg-logo-refined.svg"
             alt="CYMG — Children and Youth Major Group"
@@ -68,26 +68,30 @@ export default function Header() {
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              to={item.href}
-              className={cn(
-                'text-sm px-3 py-2 transition-colors hover:text-[var(--unep-blue)]',
-                isActive(item.href)
-                  ? 'text-[var(--unep-blue)] font-medium'
-                  : 'text-ink'
-              )}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {navItems.map((item) => {
+            const active = isActive(item.href);
+            return (
+              <Link
+                key={item.href}
+                to={item.href}
+                className={cn(
+                  'relative text-sm px-3 py-2 transition-colors hover:text-[var(--cymg-green)]',
+                  active ? 'text-[var(--cymg-green)] font-medium' : 'text-ink'
+                )}
+              >
+                {item.label}
+                {active && (
+                  <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-[var(--cymg-green)]" />
+                )}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="flex items-center gap-2">
           <button
             onClick={toggle}
-            className="p-2 text-ink hover:text-[var(--unep-blue)] transition-colors"
+            className="p-2 text-ink hover:text-[var(--cymg-green)] transition-colors"
             aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
           >
             {isDark ? <Sun size={18} /> : <Moon size={18} />}
@@ -96,7 +100,7 @@ export default function Header() {
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
             <SheetTrigger asChild>
               <button
-                className="lg:hidden p-2 text-ink hover:text-[var(--unep-blue)] transition-colors"
+                className="lg:hidden p-2 text-ink hover:text-[var(--cymg-green)] transition-colors"
                 aria-label="Open navigation menu"
               >
                 <Menu size={20} />
@@ -123,10 +127,10 @@ export default function Header() {
                     to={item.href}
                     onClick={() => setMobileOpen(false)}
                     className={cn(
-                      'px-4 py-3 text-sm transition-colors hover:text-[var(--unep-blue)]',
+                      'px-4 py-3 text-sm transition-colors border-l-2 hover:text-[var(--cymg-green)]',
                       isActive(item.href)
-                        ? 'text-[var(--unep-blue)] font-medium'
-                        : 'text-ink'
+                        ? 'text-[var(--cymg-green)] font-medium border-[var(--cymg-green)]'
+                        : 'text-ink border-transparent'
                     )}
                   >
                     {item.label}

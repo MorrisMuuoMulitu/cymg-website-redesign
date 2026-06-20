@@ -21,7 +21,7 @@ export default function About() {
       >
         <div
           className="absolute top-0 left-0 w-1.5 h-full"
-          style={{ backgroundColor: 'var(--unep-green)' }}
+          style={{ backgroundColor: 'var(--cymg-green)' }}
           aria-hidden="true"
         />
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,12 +32,12 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <p
-              className="font-mono text-xs uppercase tracking-[0.15em] mb-3 text-[var(--unep-green)]"
+              className="font-mono text-xs uppercase tracking-[0.15em] mb-3 text-[var(--cymg-green)]"
             >
               About
             </p>
             <h1 className="text-4xl sm:text-5xl md:text-5xl font-semibold text-ink leading-[1.15]">
-              About <span style={{ color: 'var(--unep-blue)' }}>CYMG</span>
+              About <span style={{ color: 'var(--cymg-green)' }}>CYMG</span>
             </h1>
             <p className="mt-5 text-lg md:text-xl max-w-2xl leading-relaxed text-[var(--ink-60)]">
               The official UN-recognized constituency for children and youth engaging with UNEP,
@@ -74,10 +74,10 @@ export default function About() {
               style={{ color: 'var(--ink)' }}
             >
               <span
-                className="font-serif float-left mr-3 -mt-2 leading-none"
+                className="font-display float-left mr-3 -mt-2 leading-none"
                 style={{
                   fontSize: '3.5rem',
-                  color: 'var(--unep-blue)',
+                  color: 'var(--cymg-green)',
                 }}
                 aria-hidden="true"
               >
@@ -101,10 +101,10 @@ export default function About() {
 
             <blockquote
               className="mt-8 pl-6 py-2 border-l-4"
-              style={{ borderColor: 'var(--unep-blue)' }}
+              style={{ borderColor: 'var(--cymg-green)' }}
             >
               <p
-                className="font-serif text-lg md:text-xl leading-[1.65]"
+                className="font-display text-lg md:text-xl leading-[1.65]"
                 style={{ color: 'var(--ink)' }}
               >
                 {PULL_QUOTE}
@@ -133,8 +133,8 @@ export default function About() {
               <div
                 className="absolute -top-4 -left-4 w-12 h-12 rounded-sm flex items-center justify-center text-2xl font-bold"
                 style={{
-                  backgroundColor: 'var(--unep-green)',
-                  color: '#0A1128',
+                  backgroundColor: 'var(--cymg-green)',
+                  color: 'var(--paper)',
                 }}
               >
               "
@@ -160,14 +160,14 @@ export default function About() {
         <section className="mb-28">
           <div className="flex items-center gap-3 mb-3">
             <div
-              className="flex h-10 w-10 items-center justify-center rounded-lg"
-              style={{ backgroundColor: 'rgba(42,77,255,0.1)' }}
+              className="flex h-10 w-10 items-center justify-center rounded-sm"
+              style={{ backgroundColor: 'rgba(30,77,50,0.1)' }}
             >
-              <BookOpen className="w-5 h-5" style={{ color: 'var(--unep-blue)' }} />
+              <BookOpen className="w-5 h-5" style={{ color: 'var(--cymg-green)' }} />
             </div>
             <p
               className="font-mono text-xs uppercase tracking-[0.15em]"
-              style={{ color: 'var(--unep-blue)' }}
+              style={{ color: 'var(--cymg-green)' }}
             >
               Legal Basis
             </p>
@@ -193,7 +193,7 @@ export default function About() {
               return (
                 <div
                   key={mandate.code}
-                  className="rounded-xl border overflow-hidden transition-colors"
+                  className="rounded-sm border overflow-hidden transition-colors"
                   style={{
                     backgroundColor: 'var(--surface)',
                     borderColor: 'var(--line)',
@@ -207,8 +207,8 @@ export default function About() {
                     <code
                       className="font-mono text-xs sm:text-sm px-2 py-1 rounded whitespace-nowrap shrink-0"
                       style={{
-                        color: 'var(--unep-blue)',
-                        backgroundColor: 'rgba(42,77,255,0.1)',
+                        color: 'var(--cymg-green)',
+                        backgroundColor: 'rgba(30,77,50,0.1)',
                       }}
                     >
                       {mandate.code}
@@ -252,7 +252,7 @@ export default function About() {
         <section className="mb-28">
           <p
             className="font-mono text-xs uppercase tracking-[0.15em] mb-3"
-            style={{ color: 'var(--unep-blue)' }}
+            style={{ color: 'var(--cymg-green)' }}
           >
             History
           </p>
@@ -280,7 +280,7 @@ export default function About() {
                   <div className="hidden md:block md:w-1/2" />
                   <div
                     className="absolute left-4 md:left-1/2 w-3 h-3 rounded-sm -translate-x-1/2 mt-2"
-                    style={{ backgroundColor: 'var(--unep-blue)' }}
+                    style={{ backgroundColor: 'var(--cymg-green)' }}
                     aria-hidden="true"
                   />
                   <div className="pl-10 md:pl-0 md:w-1/2">
@@ -293,7 +293,7 @@ export default function About() {
                     >
                       <span
                         className="font-mono text-2xl md:text-3xl font-bold block mb-2"
-                        style={{ color: 'var(--unep-blue)' }}
+                        style={{ color: 'var(--cymg-green)' }}
                       >
                         {event.year}
                       </span>

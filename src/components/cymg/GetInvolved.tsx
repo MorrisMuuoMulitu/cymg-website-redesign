@@ -5,13 +5,16 @@ export default function GetInvolved() {
   return (
     <section
       id="get-involved"
-      className="bg-[var(--unep-green-dark)] text-white"
+      className="bg-[var(--cymg-green-dark)] text-white"
       aria-labelledby="get-involved-heading"
     >
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
-            <p className="text-xs uppercase tracking-[0.15em] text-white/70 font-medium mb-3">Get involved</p>
+            <div className="flex items-center gap-3 mb-4">
+              <span className="w-8 h-0.5 bg-white/50" />
+              <p className="text-xs uppercase tracking-[0.15em] text-white/70 font-medium">Get involved</p>
+            </div>
             <h2
               id="get-involved-heading"
               className="text-3xl md:text-4xl font-medium leading-[1.2] mb-6"
@@ -26,7 +29,7 @@ export default function GetInvolved() {
             <div className="flex flex-wrap items-center gap-4">
               <Link
                 to="/join"
-                className="inline-block px-6 py-3.5 text-xs font-bold uppercase tracking-[0.15em] text-white border border-white/80 hover:bg-white hover:text-[var(--unep-green-dark)] transition-colors"
+                className="inline-block px-7 py-3.5 text-xs font-bold uppercase tracking-[0.15em] text-[var(--cymg-green-dark)] bg-white hover:bg-white/90 transition-colors"
               >
                 Apply for membership
               </Link>

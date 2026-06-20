@@ -17,7 +17,7 @@ export default function NewsletterCTA() {
         Receive updates on consultations, events, and opportunities.
       </p>
       {submitted ? (
-        <div className="flex items-center justify-center gap-2 py-3 text-[var(--unep-green)]">
+        <div className="flex items-center justify-center gap-2 py-3 text-[var(--cymg-green)]">
           <Check size={18} />
           <span className="text-sm font-medium">Thanks for subscribing.</span>
         </div>
@@ -34,13 +34,13 @@ export default function NewsletterCTA() {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="your@email.com"
               required
-              className="w-full pl-9 pr-4 py-3 text-sm outline-none border border-line bg-paper focus:border-[var(--unep-blue)] font-light"
+              className="w-full pl-9 pr-4 py-3 text-sm outline-none border border-line bg-paper focus:border-[var(--cymg-green)] font-light"
               style={{ color: 'var(--ink)' }}
             />
           </div>
           <button
             type="submit"
-            className="px-6 py-3 text-xs font-bold uppercase tracking-[0.1em] text-white bg-[var(--unep-green)] hover:bg-[var(--unep-green-deep)] transition-colors"
+            className="px-6 py-3 text-xs font-bold uppercase tracking-[0.1em] text-white bg-[var(--cymg-green)] hover:bg-[var(--cymg-green-deep)] transition-colors"
           >
             Subscribe
           </button>

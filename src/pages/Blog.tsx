@@ -93,7 +93,7 @@ export default function Blog() {
                 onClick={() => setTagFilter(f.value)}
                 className="text-mono-sm px-4 py-2 rounded-sm transition-all"
                 style={{
-                  backgroundColor: tagFilter === f.value ? 'var(--unep-blue)' : 'var(--surface)',
+                  backgroundColor: tagFilter === f.value ? 'var(--cymg-green)' : 'var(--surface)',
                   color: tagFilter === f.value ? 'var(--paper)' : 'var(--ink)',
                   border: tagFilter === f.value ? 'none' : '1px solid var(--line)',
                 }}

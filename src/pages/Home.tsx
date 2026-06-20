@@ -14,10 +14,13 @@ export default function Home() {
       <StatsStrip />
       <About />
 
-      {/* What we do — UNEP-style green section */}
-      <section className="bg-[var(--unep-green)] text-white">
+      {/* What we do — CYMG green section */}
+      <section className="bg-[var(--cymg-green)] text-white">
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-          <p className="text-xs uppercase tracking-[0.15em] text-white/70 font-medium mb-3">What we do</p>
+          <div className="flex items-center gap-3 mb-4">
+            <span className="w-8 h-0.5 bg-white/50" />
+            <p className="text-xs uppercase tracking-[0.15em] text-white/70 font-medium">What we do</p>
+          </div>
           <h2 className="text-3xl md:text-4xl font-medium leading-[1.2] mb-12 max-w-2xl">
             We connect youth voices with UN environmental processes
           </h2>
@@ -62,7 +65,10 @@ export default function Home() {
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <p className="text-xs uppercase tracking-[0.15em] text-[var(--unep-green)] font-medium mb-3">Upcoming</p>
+              <div className="flex items-center gap-3 mb-4">
+                <span className="w-8 h-0.5 bg-[var(--cymg-green)]" />
+                <p className="text-xs uppercase tracking-[0.15em] text-[var(--cymg-green)] font-medium">Upcoming</p>
+              </div>
               <h2 className="text-3xl md:text-4xl font-medium text-ink leading-[1.2] mb-6">
                 Road to UNEA-7 and the Youth Environment Assembly
               </h2>
@@ -71,14 +77,14 @@ export default function Home() {
               </p>
               <Link
                 to="/unea-and-core-processes"
-                className="inline-block px-6 py-3.5 text-xs font-bold uppercase tracking-[0.15em] text-white bg-[var(--unep-blue)] hover:bg-[var(--unep-blue-deep)] transition-colors"
+                className="inline-block px-7 py-3.5 text-xs font-bold uppercase tracking-[0.15em] text-white bg-[var(--cymg-green)] hover:bg-[var(--cymg-green-deep)] transition-colors"
               >
                 Track the cycle
               </Link>
             </div>
 
             <div className="relative">
-              <div className="border border-line overflow-hidden">
+              <div className="border border-line overflow-hidden bg-paper">
                 <img
                   src="https://ik.imagekit.io/5zp8ovb7c/CYMG/Yea2025.avif?updatedAt=1757413112399"
                   alt="Youth representatives at the Youth Environment Assembly"
@@ -98,7 +104,10 @@ export default function Home() {
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             <div>
-              <p className="text-xs uppercase tracking-[0.15em] text-[var(--unep-green)] font-medium mb-3">Leadership</p>
+              <div className="flex items-center gap-3 mb-4">
+                <span className="w-8 h-0.5 bg-[var(--cymg-green)]" />
+                <p className="text-xs uppercase tracking-[0.15em] text-[var(--cymg-green)] font-medium">Leadership</p>
+              </div>
               <h2 className="text-3xl md:text-4xl font-medium text-ink leading-[1.2] mb-6">
                 Run by youth volunteers
               </h2>
@@ -108,13 +117,13 @@ export default function Home() {
               <div className="flex flex-wrap items-center gap-4">
                 <Link
                   to="/governance"
-                  className="inline-block px-6 py-3.5 text-xs font-bold uppercase tracking-[0.15em] text-white bg-[var(--unep-blue)] hover:bg-[var(--unep-blue-deep)] transition-colors"
+                  className="inline-block px-7 py-3.5 text-xs font-bold uppercase tracking-[0.15em] text-white bg-[var(--cymg-green)] hover:bg-[var(--cymg-green-deep)] transition-colors"
                 >
                   Governance
                 </Link>
                 <Link
                   to="/team"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-bold uppercase tracking-[0.1em] text-ink border border-line hover:bg-white transition-colors"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-bold uppercase tracking-[0.1em] text-ink border border-line hover:border-[var(--cymg-green)] hover:text-[var(--cymg-green)] transition-colors"
                 >
                   Meet the team
                 </Link>

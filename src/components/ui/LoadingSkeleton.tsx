@@ -11,8 +11,8 @@ export default function LoadingSkeleton({ type = 'text', count = 1, className }:
     return (
       <div className="min-h-[50vh] flex items-center justify-center">
         <div className="flex flex-col items-center gap-4">
-          <div className="w-12 h-12 rounded-full shimmer" />
-          <div className="w-32 h-4 rounded shimmer" />
+          <div className="w-12 h-12 shimmer" />
+          <div className="w-32 h-4 shimmer" />
         </div>
       </div>
     );
@@ -24,7 +24,7 @@ export default function LoadingSkeleton({ type = 'text', count = 1, className }:
         <div
           key={i}
           className={cn(
-            'rounded-lg shimmer',
+            'shimmer',
             type === 'card' ? 'h-48 w-full' : 'h-4',
             type === 'text' && i === 0 && 'w-3/4',
             type === 'text' && i === 1 && 'w-full',
